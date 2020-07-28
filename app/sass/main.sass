@@ -1,0 +1,2208 @@
+@import "../fonts/fonts.css"
+
+body
+	scroll-behavior: smooth
+	background-color: #fff
+	font-family: 'Proxima Nova Rg'
+	color: #000
+	font-size: 14px
+	line-height: 1.4
+	position: relative
+	-webkit-font-smoothing: antialiased
+	transition: unset
+*,
+*:after,
+*:before
+	transition: .3s all ease
+h1::selection, h2::selection, h3::selection, h4::selection, h5::selection, h6::selection, p::selection, a::selection, span::selection, div::selection, img::selection, mark::selection, ul::selection, li::selection
+	color            : #fff
+	background-color : #770a68
+::selection
+	color            : #fff
+	background-color : #770a68
+a, a:hover, a:active, a:focus,
+button, input, button:hover, button:active, button:focus,
+input:focus, input:active, .btn, .btn:after, select:focus, select:active
+	text-decoration: none
+	outline: none
+	transition: all 0.4s ease
+	cursor: pointer
+a
+	color: #000
+	&:hover
+		color: #770a68
+button
+	border: transparent
+	background: none
+option
+	color: #000
+textarea
+	resize:none
+input,
+textarea,
+select
+	color: #000
+	font-family: 'Proxima Nova Rg'
+	font-size: 14px
+	padding: 8px 15px
+	background: #fff
+	border: none
+input,
+select
+input[type="text"]::placeholder,
+input[type="email"]::placeholder,
+input[type="tel"]::placeholder
+	color: #000
+input:focus,
+textarea:focus,
+input:active,
+textarea:active
+	border: none
+	color: #000
+	box-shadow: inset 0px 0px 0px 3px rgba(130,15,113,1)
+	outline: none
+.img-fluid
+	max-width: 100%
+	height: auto
+.shd
+	box-shadow: 0px 12px 28px -13px rgba(0,0,0,0.64)
+	&:hover
+		box-shadow: 0px 16px 32px -9px rgba(0,0,0,0.69)
+.btn
+	outline: none
+	font-size: 14px
+	font-family: 'Proxima Nova Bl'
+	text-transform: uppercase
+	text-align: center
+	padding: 15px 30px
+	color: #fff
+	border-radius: 6px
+	background: rgb(122,12,107)
+	background: linear-gradient(to bottom, rgb(122,12,107) 0%,rgb(153,33,136) 100%)
+	box-shadow: 0px 5px 19px -3px rgba(138,62,95,0.48)
+	position: relative
+	display: inline-block
+	max-width: 320px
+	&:hover
+		box-shadow: 0px 13px 14px 1px rgba(138,62,95,0.72)
+		color: #fff
+	&_trsp
+		background: #fff
+		border: 1px solid rgb(122,12,107)
+		color: #000
+		&:hover
+			background: #e5e5e5
+			color: #000
+.und
+	text-decoration: underline
+	&:hover
+		text-decoration: none
+.upp
+	text-transform: uppercase
+.tac
+	text-align: center
+.list
+	&_circle
+		list-style-type: none
+		padding-left: 0
+		margin-bottom: 0
+		li
+			padding-left: 25px
+			position: relative
+			&:not(:last-child)
+				margin-bottom: 10px
+			&::before
+				content: ''
+				position: absolute
+				width: 8px
+				height: 8px
+				background-color: rgb(122,12,107)
+				left: 0
+				top: 8px
+				border-radius: 50%
+	&_alpha
+		list-style-type: none
+		padding-left: 0
+		margin-bottom: 0
+		li
+			padding-left: 35px
+			position: relative
+			&:not(:last-child)
+				margin-bottom: 10px
+			&::before
+				content: ''
+				position: absolute
+				width: 25px
+				height: 22px
+				background: url('../img/list_alpha.png') no-repeat 50% 50% / contain
+				left: 0
+				top: -3px
+	&_string
+		list-style-type: none
+		padding-left: 0
+		margin-bottom: 0
+		li
+			padding-left: 20px
+			position: relative
+			&:not(:last-child)
+				margin-bottom: 10px
+			&::before
+				content: ''
+				position: absolute
+				width: 8px
+				height: 1px
+				background-color: #000
+				left: 0
+				top: 50%
+				margin-top: -.5px
+.tabs
+	&__list
+		list-style-type: none
+		padding: 0
+
+		li
+			cursor: pointer
+	&__content-item
+			transition: unset
+.popup__container
+	padding: 40px
+	background-color: transparent
+	overflow: hidden
+	.fancybox-close-small
+		top: 40px
+		right: 40px
+		color: #000
+	.popup__wrp
+		display: -webkit-flex
+		display: -moz-flex
+		display: -ms-flex
+		display: -o-flex
+		display: flex
+		-webkit-flex-wrap: wrap
+		-moz-flex-wrap: wrap
+		-ms-flex-wrap: wrap
+		-o-flex-wrap: wrap
+		flex-wrap: wrap
+		-ms-align-items: center
+		align-items: center
+		justify-content: center
+		position: relative
+		&::before
+			z-index: 1
+			content: ''
+			position: absolute
+			height: 110%
+			width: 110%
+			top: -5%
+			right: -5%
+			bottom: -5%
+			left: -5%
+			z-index: 1
+			background: rgb(122,12,107)
+			background: linear-gradient(to bottom, rgb(122,12,107) 0%,rgb(153,33,136) 100%)
+			opacity: .7
+	.popup
+		width: 100%
+		height: 100%
+		position: relative
+		z-index: 2
+		display: flex
+		flex-direction: column
+		align-items: center
+		justify-content: flex-start
+		background-color: #fff
+		color: #000
+		padding: 20px 25px 30px
+		text-align: center
+		&_call
+			&__wrp
+				max-width: 320px
+		&_cart
+			&__wrp
+				max-width: 970px
+				.popup
+					text-align: left
+			&__head
+				font-family: 'Proxima Nova Bl'
+				font-size: 18px
+				text-transform: uppercase
+				div
+					&:nth-child(1)
+						width: 60%
+						padding: 15px 0 5px
+			&__item
+				display: flex
+				align-items: center
+				div
+					border-bottom: 2px solid #fff
+					font-family: 'Proxima Nova Sm'
+					&:nth-child(1)
+						width: 70%
+						height: 80px
+						padding: 25px 15px
+						border-right: 2px solid #fff
+					&:nth-child(2)
+						width: 30%
+						height: 80px
+						padding: 25px 15px
+				&:nth-child(odd)
+					background-color: #f1e6ef
+				&:nth-child(even)
+					background-color: #e3cde0
+			&__btn
+				margin-left: 8px
+				&:hover
+					opacity: .4
+		&__ttl
+			color: inset 0px 0px 0px 4px rgba(130,15,113,1)
+			font-family: 'Proxima Nova Bl', sans-serif
+			text-transform: uppercase
+			font-size: 22px
+			margin-bottom: 30px
+		.form__input
+			color: #000
+			margin-bottom: 15px
+			border: 1px solid rgba(130,15,113,1)
+			width: 100%
+		input.form__input::placeholder
+			color: #000
+		.btn
+			width: 100%
+			margin-bottom: 15px
+		&__policy
+			margin-top: 15px
+			max-width: 230px
+			text-align: center
+			font-size: 12px
+			a
+				font-size: 12px 
+				color: rgba(130,15,113,1)
+.owl-carousel
+	.owl-dots
+		position: absolute
+		width: 100%
+		display: flex
+		justify-content: center
+		bottom: 0
+		button.owl-dot
+			width: 15px
+			height: 15px
+			border: 1px solid #333
+			background-color: transparent
+			border-radius: 50%
+			position: relative
+			transform: scale(1)
+			&:not(:last-child)
+				margin-right: 13px
+			&.active
+				transform: scale(0.7)
+				border-color: transparent
+				background-color: #770a68
+	.owl-nav
+		button.owl-prev,
+		button.owl-next
+			width: 50px
+			height: 50px
+			display: flex
+			justify-content: center
+			align-items: center
+			position: absolute
+			border-radius: 50%
+			bottom: 50%
+			margin-bottom: -25.5px
+			background: linear-gradient(to bottom, #7a0c6b 0%, #992188 100%)
+		button.owl-prev:hover,
+		button.owl-next:hover
+			box-shadow: 0px 10px 17px 5px rgba(0,0,0,0.49)
+		button.owl-prev.disabled,
+		button.owl-next.disabled,
+		button.owl-prev.disabled:hover,
+		button.owl-next.disabled:hover
+			opacity: .4
+			cursor: default
+			
+		button.owl-prev
+			left: -60px
+		button.owl-next
+			right: -60px
+.section
+	&_inner
+		padding: 60px 0
+		position: relative
+		&::after
+			content: ''
+			position: absolute
+			width: 30px
+			height: 1px
+			background-color: #000
+			left: 50%
+			bottom: 0
+			margin-left: -15px
+		&.type
+			&::after
+				display: none
+		.container
+			position: relative
+	&__ttl
+		font-size: 40px
+		font-family: 'Proxima Nova Bl'
+		letter-spacing: 2px
+		margin-bottom: 45px
+		text-align: center
+		text-transform: uppercase
+	&__subttl
+		font-size: 20px
+		margin-bottom: 15px
+		font-family: 'Proxima Nova Bl'
+		text-transform: uppercase
+	&__wrp
+		position: relative
+		overflow: hidden
+		&::before,
+		&::after
+			content: ''
+			height: 200px
+			width: 100%
+			position: absolute
+			left: 0
+			right: 0
+			z-index: 1
+		&::before
+			top: 0
+		&::after
+			bottom: 0
+		.container
+			position: relative
+			z-index: 2
+		.section_inner
+			&::after
+				z-index: 2
+.input__wrp
+	position: relative
+	max-width: 230px
+	input,
+	select
+		width: 100%
+		padding-left: 35px
+	&::before
+		content: ''
+		position: absolute
+		left: 10px
+		top: 8px
+		width: 18px
+		height: 17px
+		background-position: 50% 50%
+		background-size: contain
+		background-repeat: no-repeat
+	&_name::before
+		background-image: url(../img/icon__form-name.png)
+	&_mail::before
+		background-image: url(../img/icon__form-mes.png)
+		top: 8px
+	&_tel::before
+		background-image: url(../img/icon__form-tel.png)
+		top: 8px
+	&:not(:last-child)
+		margin-bottom: 15px
+.header
+	background-color: #3c1135
+	&__item
+		color: #fff
+		padding-left: 35px
+		position: relative
+		&::before
+			content: ''
+			position: absolute
+			left: 10px
+			top: 0px
+			width: 16px
+			height: 17px
+			background-position: 50% 50%
+			background-size: contain
+			background-repeat: no-repeat
+		&_mail
+			text-decoration: underline
+			margin-right: 40px
+			&::after
+				content: ''
+				position: absolute
+				right: -25px
+				top: 0px
+				width: 1px
+				height: 100%
+				background-color: #fff
+			&::before
+				background-image: url(../img/icon__mes_white.png)
+		&_tel
+			&::before
+				background-image: url(../img/icon__form-tel_white.png)
+		&:hover
+			color: #fff
+			opacity: .7
+	&__btn
+		position: relative
+		z-index: 1
+		margin-top: -10px
+		transform: translateY(6px)
+		&:hover
+			transform: translateY(3px)
+.crumbs
+	display: flex
+	flex-wrap: wrap
+	list-style-type: none
+	padding-left: 0
+	margin-left: 0
+	margin-bottom: 0
+	margin-top: 20px
+	li,
+	a
+		position: relative
+		color: #1E2F31
+		padding: 7px 12px
+		border-radius: 3px
+	li:not(:last-child)
+		background-color: transparent
+		border: 1px solid #383637
+		margin-right: 8px
+		&:hover
+			background: linear-gradient(to bottom, rgb(122,12,107) 0%,rgb(153,33,136) 100%)
+			border-color: rgb(122,12,107)
+			a
+				color: #fff
+	li:last-child
+		color: #fff
+		background: linear-gradient(to bottom, rgb(122,12,107) 0%,rgb(153,33,136) 100%)
+		box-shadow: 0px 6px 25px -11px rgba(0, 0, 0, 0.84)
+.banner
+	background-position: 50% 100%
+	background-size: cover
+	background-repeat: no-repeat
+	position: relative
+	padding-bottom: 20px
+	&::before
+		content: ''
+		position: absolute
+		width: 100%
+		height: 100%
+		left: 0
+		top: 0
+		background-color: #fff
+		opacity: .7
+	.container
+		position: relative
+	&__top
+		padding: 20px 0
+	&__nav
+		position: relative
+		&::after
+			content: ''
+			position: absolute
+			left: 15px
+			right: 15px
+			bottom: -15px
+			width: calc(100% - 30px)
+			height: 2px
+			background-color: #ccc
+		&-link
+			font-family: 'Proxima Nova Bl'
+			text-align: center
+			text-transform: uppercase
+			display: block
+			position: relative
+			&::after
+				content: ''
+				position: absolute
+				left: 0
+				right: 0
+				bottom: -15px
+				width: 0
+				opacity: 0
+				height: 2px
+				background-color: #820f71
+				z-index: 1
+			&.active,
+			&:hover
+				&::after
+					width: 100%
+					opacity: 1
+	&__logo
+		display: block
+		&:hover
+			opacity: .8
+			transform: scale(.92)
+@keyframes promo-bar
+	0%
+		opacity: 0
+		transform: scale(0)
+	100%
+		opacity: 1
+		transform: scale(1)
+@keyframes promo-item
+	0%
+		transform: scaleX(0)
+	100%
+		transform: scaleX(1)
+.offer
+	padding: 40px 0
+	text-align: center
+	display: flex
+	flex-direction: column
+	align-items: center
+	&__ttl
+		font-size: 36px
+		text-transform: uppercase
+	&__subttl
+		font-size: 24px
+		color: #820f71
+	&__promo
+		width: 100%
+		max-width: 1047px
+		height: 466px
+		margin: 30px auto
+		background: url('../img/offer-promo__bg.png') no-repeat 50% 50% / contain
+		position: relative
+		display: flex
+		justify-content: space-around
+		align-items: center
+		&-bar
+			position: absolute
+			left: 0
+			top: 0
+			width: 0%
+			height: 100%
+			overflow: hidden
+			transition: width 3s ease-in-out
+			
+			&-img
+				display: block
+				position: absolute
+				left: -16px
+				top: 0
+				width: 1079px
+				height: 466px
+				background-position: 50% 100%
+				background-size: 100%
+				background-repeat: no-repeat
+		&-item
+			position: relative
+			width: 260px
+			height: 260px
+			margin: auto 40px
+			background-color: #fff
+			border-radius: 50%
+			display: flex
+			justify-content: center
+			align-items: center
+			box-shadow: 0px 16px 32px -9px rgba(0, 0, 0, 0.69)
+			&:nth-child(2)
+				margin-left: 81px
+			&:nth-child(4)
+				margin-right: 81px
+		&.triggered
+			.offer__promo-bar
+				width: 100%
+	&__btn
+		max-width: 700px
+.test
+	background: linear-gradient(to bottom, #f7f6f1 0%,#d7bfc9 100%)
+	&__item
+		display: flex
+		flex-direction: column
+		align-items: center
+		text-align: center
+		padding: 40px 10px
+		width: calc(90% / 5)
+		position: relative
+		&::before
+			content: ''
+			position: absolute
+			width: 100%
+			height: 0
+			left: 0
+			top: -10%
+			bottom: -10%
+			transition: .6s all ease
+			background: linear-gradient(to bottom, #d0b2c200 0%, #fbf8f8 33%, #fbf8f8 61%, #d0b2c200 100%)
+			background-repeat: no-repeat
+		&:hover
+			&::before
+				height: 120%
+			&
+				transform: scale(.95)
+		& > *
+			position: relative
+		&-img
+			height: 50px
+			width: 100%
+			max-width: 60px
+			margin: 0 auto 25px
+			background-repeat: no-repeat
+			background-position: 50% 50%
+			background-size: contain
+		&-ttl
+			font-family: 'Proxima Nova Bl'
+			font-size: 52px
+			position: relative
+			margin-bottom: 30px
+			&::after
+				content: 'α'
+				position: absolute
+				left: 46%
+				font-family: 'Poxima Nova Rg'
+				font-size: 18px
+				bottom: -20px
+		&-descr
+			font-size: 18px
+	&-list
+		&__item
+			padding: 15px 20px
+			background-color: #fff
+			border-radius: 6px
+			&-top
+				font-family: 'Proxima Nova Bl'
+				font-size: 16px
+				margin-bottom: 20px
+			&-ttl
+				font-family: 'Proxima Nova Bl'
+				font-size: 18px
+				margin-bottom: 25px
+			&-img
+				width: 100%
+				max-width: 670px
+				height: 150px
+				border-radius: 6px
+				border: 1px solid #e1dbdb
+				background-repeat: no-repeat
+				background-position: 50% 50%
+				background-size: cover
+				margin-bottom: 25px
+		.tabs
+			&__list
+				li
+					padding: 8px 15px
+					border: 1px solid #e1dbdb
+					border-radius: 6px
+					margin-right: 8px
+					text-transform: uppercase
+					&.active
+						color: #fff
+						background: rgb(122,12,107)
+						background: linear-gradient(to bottom, rgb(122,12,107) 0%,rgb(153,33,136) 100%)
+						box-shadow: 0px 5px 19px -3px rgba(138,62,95,0.48)
+						position: relative
+						display: inline-block
+						max-width: 320px
+					&:hover
+						box-shadow: 0px 13px 14px 1px rgba(138,62,95,0.72)
+.team
+	overflow: hidden
+	
+	&::before
+		content: ''
+		position: absolute
+		width: 100%
+		height: 340px
+		left: 0
+		top: 50%
+		margin-top: -170px
+		background: url('../img/team__bg-promo.png') no-repeat 50% 50% / contain
+	background: linear-gradient(to bottom, #d7bfc9 0%, #bd92af 100%)
+	&__item
+		max-width: 270px
+		margin-left: auto
+		margin-right: auto
+		color: #fff
+		padding: 0 20px
+		&:hover
+			.team__item-img
+				box-shadow: 0px 15px 24px 5px rgba(0,0,0,0.34)
+		&-img
+			width: 100%
+			height: 300px
+			background-repeat: no-repeat
+			background-position: 50% 50%
+			background-size: cover
+			margin-bottom: 20px
+		&-ttl
+			font-family: 'Proxima Nova Bl'
+			font-size: 25px
+			text-transform: uppercase
+			max-width: 70%
+			margin-bottom: 10px
+		&-pos
+			font-size: 20px
+.train
+	padding-top: 0
+	overflow: hidden
+	background: url('../img/progr__bg.jpg') no-repeat 50% 50% / cover
+	&::before
+		content: ''
+		position: absolute
+		width: 100%
+		height: 300px
+		top: 0
+		left: 0
+		background: linear-gradient(to bottom, #f7f5ef 0%, transparent 100%)
+	&::after
+		display: none
+	.container
+		position: relative
+	&__item
+		&-wrp
+			margin-bottom: 30px
+			position: relative
+		&-card
+			color: #fff
+			text-transform: uppercase
+			min-height: 300px
+			display: flex
+			flex-direction: column
+			justify-content: center
+			align-items: center
+			background-position: 50% 50%
+			background-size: cover
+			background-repeat: no-repeat
+			border-radius: 6px
+			&__ttl
+				font-family: 'Proxima Nova Bl'
+				font-size: 25px
+				max-width: 350px
+				text-align: center
+				
+			&__descr
+				text-decoration: underline
+				opacity: .7
+		&-in
+			position: absolute
+			left: 0
+			top: 0
+			width: 150%
+			visibility: hidden
+			opacity: 0
+			padding: 30px
+			background-color: #fff
+			border-radius: 6px
+			box-shadow: 0px 4px 9px 5px rgba(0,0,0,0.26)
+			&__ttl
+				font-family: 'Proxima Nova Bl'
+				font-size: 18px
+				text-transform: uppercase
+				margin-bottom: 10px
+			&__list
+				font-weight: 600
+		&-wrp
+			&:hover
+				.train__item-in
+					width: 200%
+					visibility: visible
+					opacity: 1
+					z-index: 2
+			&:nth-child(even)
+				.train__item-in
+					left: auto
+					right: 0
+.views
+	border-top: 6px solid #651859
+	color: #fff
+	background: linear-gradient(to bottom, rgba(249,246,249,1) 0%, rgba(159,60,146,1) 40%, rgba(159,60,146,1) 72%, rgba(249,246,249,1) 100%)
+	padding-top: 120px
+	&::before
+		content: ''
+		position: absolute
+		width: 30px
+		height: 1px
+		background-color: #000
+		left: 50%
+		top: 70px
+		margin-left: -15px
+	&::after
+		display: none
+	&__item
+		color: #000
+		position: relative
+		&-wrp
+			padding: 4px
+			border: 1px solid #fff
+			border-radius: 6px
+		&-card
+			display: flex
+			flex-direction: column
+			align-items: center
+			padding: 30px 15px
+			border-radius: 6px
+			min-height: 390px
+			transform: rotateX(0) rotateY(0)
+			transform-style: preserve-3d
+			backface-visibility: hidden
+			transition: all .4s ease-in-out
+			&__img
+				width: 110px
+				height: 110px
+				background-position: 50% 50%
+				background-repeat: no-repeat
+				background-size: contain
+			&__ttl
+				font-family: 'Proxima Nova Bl'
+				font-size: 16px
+				text-transform: uppercase
+				margin: 25px auto
+			&__arrow
+				margin-top: auto
+		&-in
+			display: flex
+			flex-direction: column
+			padding: 15px
+			border-radius: 6px
+			position: absolute
+			left: 0
+			top: 0
+			height: 100%
+			background-color: #fff
+			transform: rotateY(-179deg)
+			transform-style: preserve-3d
+			backface-visibility: hidden
+			transition: all .4s ease-in-out
+			&__ttl
+				font-family: 'Proxima Nova Bl'
+				text-transform: uppercase
+				margin-bottom: 10px
+		&:hover
+			.views__item-card
+				transform: rotateY(180deg)
+			.views__item-in
+				transform: rotateX(0)
+	&-gallery
+		&__item
+			display: block
+			width: 100%
+			max-width: 265px
+			margin-left: auto
+			margin-right: auto
+			height: 185px
+			background-position: 50% 50%
+			background-repeat: no-repeat
+			background-size: cover
+			border-radius: 6px
+			&:hover
+				transform: scale(.93)
+.reasons
+	padding-top: 90px
+	background: url('../img/reasons__bg.jpg') no-repeat 50% 50% / cover
+	&::before
+		content: ''
+		position: absolute
+		width: 100%
+		height: 300px
+		left: 0
+		bottom: 0
+		background: linear-gradient(to bottom, transparent 0%, transparent 30%, #ac729f 100%)
+	&::after
+		background-color: #fff
+	.container
+		position: relative
+	&__item
+		display: flex
+		flex-direction: column
+		align-items: center
+		padding: 30px 20px
+		min-height: 210px
+		max-width: 370px
+		margin-left: auto
+		margin-right: auto
+		
+		background-position: 50% 50%
+		background-repeat: no-repeat
+		background-size: cover
+		border-radius: 6px
+		margin-bottom: 30px
+		&-img
+			width: 65px
+			height: 65px
+			background-position: 50% 50%
+			background-repeat: no-repeat
+			background-size: contain
+			margin-bottom: 15px
+		&-ttl
+			font-size: 16px
+			font-family: 'Proxima Nova Bl'
+			text-align: center
+.part
+	color: #fff
+	background: linear-gradient(to bottom, rgba(172,114,159,1) 0%, rgba(140,64,127,1) 100%)
+	&::after
+		background-color: #fff
+	&__slider
+		.owl-stage
+			padding: 20px 0 40px
+		&-item
+			max-width: 160px
+			height: 110px
+			padding: 4px
+			border: 1px solid #fff
+			border-radius: 6px
+			display: block
+			position: relative
+			overflow: hidden
+			margin-left: 1px
+			margin-right: 1px
+			&-logo
+				width: 100%
+				height: 100%
+				background-color: #fff
+				background-position: 50% 50%
+				background-repeat: no-repeat
+				background-size: 110px
+				border-radius: 6px
+			&-view
+				font-size: 12px
+				color: #fff
+				text-transform: uppercase
+				text-align: center
+				background-color: #77196a
+				padding: 15px 20px
+				position: absolute
+				width: 100%
+				height: 100%
+				left: 0
+				top: 0
+				display: flex
+				justify-content: center
+				align-items: center
+				opacity: 0
+			&:hover
+				border-color: #77196a
+				.part__slider-item-view
+					opacity: .9
+.feed
+	background: url('../img/feed__bg.jpg') no-repeat 50% 50% / cover
+	&::after
+		display: none
+	&::before
+		content: ''
+		position: absolute
+		width: 100%
+		height: 300px
+		left: 0
+		top: 0
+		background: linear-gradient(to bottom, rgba(140,64,127,1) 0%, rgba(140,64,127,0) 100%)
+	.container
+		position: relative
+	&__form
+		&-item
+			&:not(:last-child)
+				margin-bottom: 25px
+			&-ttl
+				font-family: 'Proxima Nova Bl'
+				margin-bottom: 10px
+			input
+				width: 100%
+	.section__ttl
+		font-family: 'Proxima Nova Lt'
+		text-align: left
+		span
+			font-family: 'Proxima Nova Bl'
+			color: #820f71
+.footer
+	color: #fff
+	background-color: #3c1135
+	padding: 25px 0
+	&__top
+		margin-bottom: 15px
+	&__logo
+		&:hover
+			img
+				transform: scale(.95)
+				opacity: .7
+	&__item
+		color: #fff
+		padding-left: 35px
+		position: relative
+		&::before
+			content: ''
+			position: absolute
+			left: 10px
+			top: 0px
+			width: 16px
+			height: 17px
+			background-position: 50% 50%
+			background-size: contain
+			background-repeat: no-repeat
+		&_mail
+			text-decoration: underline
+			margin-right: 40px
+			&::after
+				content: ''
+				position: absolute
+				right: -25px
+				top: 0px
+				width: 1px
+				height: 100%
+				background-color: #fff
+			&::before
+				background-image: url(../img/icon__mes_white.png)
+		&_tel
+			margin-right: 40px
+			&::before
+				background-image: url(../img/icon__form-tel_white.png)
+			&::after
+				content: ''
+				position: absolute
+				right: -25px
+				top: 0px
+				width: 1px
+				height: 100%
+				background-color: #fff
+		&_geo
+			&::before
+				background-image: url(../img/icon__geo_white.png)
+		&:hover
+			color: #fff
+			opacity: .7
+	&__bot
+		&-link
+			color: #fff
+			margin-left: 40px
+			position: relative
+			&::after
+				content: ''
+				position: absolute
+				left: -20px
+				top: 0px
+				width: 1px
+				height: 100%
+				background-color: #fff
+	&__soc
+		&-link
+			width: 42px
+			height: 42px
+			border: 1px solid #fff
+			border-radius: 3px
+			display: flex
+			justify-content: center
+			align-items: center
+			&:not(:last-child)
+				margin-right: 8px
+			&:hover
+				background-color: #951c83
+				border-color: #951c83
+				transform: scale(.95)
+.values
+	background: linear-gradient(to bottom, rgba(247,246,241,1) 0%, rgba(247,246,241,1) 54%, rgba(217,194,203,1) 100%)
+	&__card
+		display: flex
+		justify-content: center
+		align-items: center
+		padding: 15px
+		border-radius: 6px
+		position: relative
+		min-height: 180px
+		max-width: 260px
+		margin-left: auto
+		margin-right: auto
+		overflow: hidden
+		transition: .6s
+		&::before
+			content: ''
+			position: absolute
+			width: 100%
+			height: 100%
+			left: 0
+			top: 0
+			right: 0
+			bottom: 0
+			background-color: #820f71
+			opacity: .8
+			transition: .6s
+		span
+			font-family: 'Proxima Nova Bl'
+			font-size: 16px
+			color: #fff
+			text-transform: uppercase
+			position: relative
+			text-align: center
+		&:hover
+			box-shadow: 0px 15px 24px 5px rgba(0, 0, 0, 0.34)
+			&::before
+				background-color: #fff
+			span
+				color: #000
+	&__img
+		display: block
+		width: 100%
+		height: 220px
+		max-width: 360px
+		margin-left: auto
+		margin-right: auto
+		border-radius: 6px
+		&:hover
+			transform: scale(.95)
+			box-shadow: 0px 15px 24px 5px rgba(0, 0, 0, 0.34)
+.about-features__wrp
+	color: #fff
+	padding: 0
+	background: url('../img/about-features__bg.jpg') no-repeat 50% 50% / cover
+	&::before
+		content: ''
+		position: absolute
+		width: 100%
+		height: 100%
+		left: 0
+		top: 0
+		opacity: .9
+		background: linear-gradient(to bottom, rgba(217,194,203,1) 0%, rgba(178,140,173,1) 41%, rgba(244,240,232,1) 100%)
+	.container
+		position: relative
+	.features
+		&::before
+			content: ''
+			position: absolute
+			width: 100%
+			height: 200px
+			left: 0
+			top: 0
+			background: linear-gradient(to bottom, rgba(217,194,203,1) 0%, transparent 100%)
+		&::after
+			display: none
+		.container
+			position: relative
+		&__item
+			width: 190px
+			margin: 15px
+			padding: 12px 13px
+			background-color: #fff
+			border-radius: 6px
+			display: flex
+			flex-direction: column
+			align-items: center
+			&-img
+				width: 100%
+				height: 70px
+				background-position: 50% 50%
+				background-size: contain
+				background-repeat: no-repeat
+				margin-bottom: 30px
+				position: relative
+				&::after
+					content: ''
+					position: absolute
+					width: 30px
+					background-color: #000
+					height: 1px
+					left: 50%
+					margin-left: -15px
+					bottom: -15px
+			&-ttl
+				font-family: 'Proxima Nova Sm'
+				text-align: center
+				color: #000
+			&:hover
+				.features__item-img
+					&::after
+						width: 50px
+						margin-left: -25px
+	.promo
+		&__descr
+			font-size: 16px
+			text-align: center
+			margin-bottom: 35px
+.keys
+	background: url('../img/keys__bg.jpg') no-repeat 50% 50% / cover
+	&::before
+		content: ''
+		position: absolute
+		width: 100%
+		height: 100%
+		left: 0
+		top: 0
+		opacity: .9
+		background: linear-gradient(to bottom, #f4f0e8 0%, #a76c9dbf 100%)
+	&__wrp
+		&::after
+			background: linear-gradient(to bottom, transparent 0%, #c198ba 100%)
+	.container
+		position: relative
+	&__item
+		display: flex
+		flex-direction: column
+		align-items: center
+		text-align: center
+		padding: 40px 10px
+		width: calc(90% / 5)
+		position: relative
+		&::before
+			content: ''
+			position: absolute
+			width: 1px
+			height: 70%
+			left: 0
+			bottom: 0
+			transition: .6s all ease
+			background: linear-gradient(to bottom, transparent 0%, rgba(0,0,0,0.76) 50%, transparent 100%)
+		&:hover
+			&
+				transform: translateY(10px)
+		& > *
+			position: relative
+		&-img
+			height: 50px
+			width: 100%
+			max-width: 60px
+			margin: 0 auto 25px
+			background-repeat: no-repeat
+			background-position: 50% 50%
+			background-size: contain
+		&-ttl
+			font-family: 'Proxima Nova Bl'
+			font-size: 52px
+			position: relative
+			margin-bottom: 10px
+			// &::after
+			// 	content: 'α'
+			// 	position: absolute
+			// 	left: 46%
+			// 	font-family: 'Poxima Nova Rg'
+			// 	font-size: 18px
+			// 	bottom: -20px
+			span
+				font-family: 'Proxima Nova Rg'
+				font-size: 36px
+		&-descr
+			font-size: 18px
+		&:last-child
+			&::after
+				content: ''
+				position: absolute
+				width: 1px
+				height: 70%
+				right: 0
+				bottom: 0
+				transition: .6s all ease
+				background: linear-gradient(to bottom, transparent 0%, rgba(0,0,0,0.76) 50%, transparent 100%)
+.about-part
+	color: #fff
+	background: linear-gradient(to bottom, #a76c9db3 0%, #a76c9dd9 44%, #f2ede9 100%)
+	&__item
+		max-width: 160px
+		height: 110px
+		padding: 4px
+		border: 1px solid #fff
+		border-radius: 6px
+		display: block
+		position: relative
+		overflow: hidden
+		margin-left: 1px
+		margin-right: 1px
+		&-logo
+			width: 100%
+			height: 100%
+			background-color: #fff
+			background-position: 50% 50%
+			background-repeat: no-repeat
+			background-size: 110px
+			border-radius: 6px
+		&-view
+			font-size: 12px
+			color: #fff
+			text-transform: uppercase
+			text-align: center
+			background-color: #77196a
+			padding: 15px 20px
+			position: absolute
+			width: 100%
+			height: 100%
+			left: 0
+			top: 0
+			display: flex
+			justify-content: center
+			align-items: center
+			opacity: 0
+		&:hover
+			border-color: #77196a
+			.about-part__item-view
+				opacity: .9
+.about-feed
+	background: url('../img/about-feed__bg.jpg') no-repeat 50% 50% / cover
+	&__wrp
+		&::before
+			background: linear-gradient(to bottom, #f1ece8 0%, transparent 100%)
+		&::after
+			background: linear-gradient(to bottom, transparent 0%, #f3efe4 100%)
+	&::before
+		content: ''
+		position: absolute
+		width: 100%
+		height: 100%
+		left: 0
+		top: 0
+		opacity: .5
+		background: linear-gradient(to bottom, rgba(242,237,233,1) 0%, rgba(241,237,220,1) 100%)
+	.container
+		position: relative
+	&__subttl
+		text-align: center
+		font-size: 20px
+		margin-top: -10px
+		margin-bottom: 30px
+	&__img
+		width: 100%
+		height: 250px
+		margin-bottom: 20px
+		border-radius: 6px
+		background-position: 50% 50%
+		background-repeat: no-repeat
+		background-size: cover
+		box-shadow: 0px 16px 32px -9px rgba(0, 0, 0, 0.39)
+		&-ttl
+			font-size: 20px
+			font-family: 'Proxima Nova Bl'
+			text-transform: uppercase
+			margin-bottom: 10px
+		&-descr
+			font-size: 18px
+	&__item
+		&:not(:last-child)
+			margin-bottom: 25px
+		&-ttl
+			font-family: 'Proxima Nova Bl'
+			margin-bottom: 10px
+		input
+			width: 100%
+.checkbox
+	min-width: 200px
+	cursor: pointer
+	position: relative
+	margin-bottom: 0
+	input[type="checkbox"],
+	input[type="radio"]
+		position: absolute
+		z-index: 1
+		opacity: 0
+		width: 100%
+		height: 30px
+		cursor: pointer
+	.checkbox__text
+		font-size: 14px
+		position: relative
+		padding: 2px 0 0 30px
+		cursor: pointer
+		width: 100%
+		height: 30px
+		display: block
+		&::before
+			content: ''
+			position: absolute
+			top: 0px
+			left: -2px
+			width: 21px
+			height: 21px
+			border-radius: 4px
+			border: 1px solid #7a0c6b
+			background: #fff
+		&::after
+			content: ''
+			position: absolute
+			top: 4px
+			left: 2px
+			width: 13px
+			height: 13px
+			background-color: #7a0c6b
+			opacity: 0
+			transform: scale(0)
+			transition: 0.2s
+			border-radius: 2px
+	input[type="checkbox"]:checked + .checkbox__text:after,
+	input[type="radio"]:checked + .checkbox__text:after
+		opacity: 1
+		transform: scale(1)
+	input[type="checkbox"]:checked + .checkbox__text:before,
+	input[type="radio"]:checked + .checkbox__text:before
+		background-color: #fff
+.args
+	&::before
+		content: ''
+		position: absolute
+		width: 100%
+		height: 100%
+		left: 0
+		top: 0
+		background: linear-gradient(to bottom, #f3efe5 0%, #f4f1e4 30%, #c39bbb 99%, #c39bbb 100%)
+	&::after
+		display: none
+	.container
+		position: relative
+	&__item
+		width: 190px
+		margin: 15px
+		padding: 17px 13px
+		background-color: #fff
+		border-radius: 6px
+		display: flex
+		flex-direction: column
+		align-items: flex-start
+		&-img
+			width: 70px
+			height: 70px
+			background-position: 50% 50%
+			background-size: contain
+			background-repeat: no-repeat
+			margin-bottom: 10px
+			position: relative
+		&-ttl
+			font-family: 'Proxima Nova Sm'
+			color: #000
+			margin-bottom: 15px
+		&:hover
+.fancybox-content
+	transition: unset
+.rev
+	background: url('../img/reviews__bg.jpg') no-repeat 50% 50% / cover
+	.section__ttl
+		color: #fff
+	&__wrp
+		&::before
+			background: linear-gradient(to bottom, #c39bbb 0%, transparent 100%)
+		&::after
+			background: linear-gradient(to bottom, transparent 0%, #c39bbb 100%)
+	&__item
+		background-color: #fff
+		padding: 20px
+		border-radius: 6px
+		margin-bottom: 20px
+		&.active
+			.rev__cnt
+				max-height: 500px
+			.rev__btn
+				&::after
+					transform: rotate(-90deg)
+	&__img
+		background-position: 50% 50%
+		background-repeat: no-repeat
+		background-size: cover
+		border-radius: 16px
+		width: 100%
+		max-width: 235px
+		height: 270px
+	&__ttl
+		font-family: 'Proxima Nova Bl'
+		font-size: 18px
+	&__info
+		&-buttons
+			&-item
+				span
+					text-decoration: underline
+				img
+					max-height: 20px
+				&:hover
+					opacity: .7
+	&__cnt
+		max-height: 130px
+		transition: max-height .5s
+		overflow: hidden
+		margin-bottom: 22px
+	&__btn
+		padding-right: 50px
+		position: relative
+		&::after
+			content: ''
+			position: absolute
+			width: 14px
+			height: 15px
+			right: 27px
+			top: 16px
+			transform: rotate(90deg)
+			background: url('../img/slider__arrow_next.png') no-repeat 50% 50% / contain
+.cert
+	&::before
+		content: ''
+		position: absolute
+		width: 100%
+		height: 100%
+		left: 0
+		top: 0
+		background: linear-gradient(to bottom, #c39bbb 0%, #c39bbb 100%)
+	&::after
+		display: none
+	&__item
+		padding: 10px
+		width: 100%
+		max-width: 280px
+		height: 320px
+		border-radius: 6px
+		overflow: hidden
+		display: flex
+		justify-content: center
+		align-items: center
+		position: relative
+		&::after
+			content: ''
+			position: absolute
+			width: 100%
+			height: 100%
+			left: 0
+			top: 0
+			right: 0
+			bottom: 0
+			border: 2px solid #fff
+			border-radius: 6px
+			box-shadow: inset 0px 0px 8px 4px rgba(0, 0, 0, 0.27)
+		&::before
+			content: ''
+			position: absolute
+			width: 100%
+			height: 100%
+			left: 0
+			top: 0
+			right: 0
+			bottom: 0
+			background-color: #3c1135
+			opacity: 0
+		&-in
+			width: 100%
+			height: 100%
+			background-position: 50% 50%
+			background-repeat: no-repeat
+			background-size: cover
+		&:hover
+			&::after
+				border-color: #76466f
+			&::before
+				opacity: .5
+.main
+	background-color: #f8f6f0
+	padding-bottom: 30px
+	position: relative
+	.train
+		&::before
+			background: linear-gradient(to bottom, #f8f6f0 0%, #0000 100%)
+	&_prog
+		background: url('../img/progr__bg.jpg') no-repeat 50% 50% / cover
+		&::before
+			content: ''
+			position: absolute
+			width: 100%
+			height: 100%
+			top: 0
+			left: 0
+			background: linear-gradient(to bottom, rgba(247,245,239,1) 0%, rgba(123,47,111,0.88) 38%, rgba(123,47,111,0.81) 62%, rgba(246,243,232,0.69) 100%)
+		.container
+			position: relative
+	&__cnt
+		height: 100%
+		padding: 15px 20px
+		background-color: #fff
+		border-radius: 6px
+		box-shadow: 0px 2px 8px -3px rgba(0, 0, 0, 0.69)
+		.section__ttl
+			text-align: left
+			margin-bottom: 30px
+.sidebar
+	&__item
+		padding: 15px
+		background-color: #fff
+		border-radius: 6px
+		box-shadow: 0px 2px 8px -3px rgba(0, 0, 0, 0.69)
+		&:not(:last-child)
+			margin-bottom: 25px
+		&-ttl
+			font-family: 'Proxima Nova Bl'
+			font-size: 16px
+			text-transform: uppercase
+			color: #a3238e
+			margin-bottom: 10px
+		&-list
+			list-style-type: none
+			padding-left: 0
+			margin-bottom: 0
+			li
+				padding-left: 20px
+				position: relative
+				&:not(:last-child)
+					margin-bottom: 10px
+				&::before
+					content: ''
+					position: absolute
+					width: 8px
+					height: 1px
+					background-color: #000
+					left: 0
+					top: 50%
+					margin-top: -.5px
+				a
+					text-decoration: underline
+			&_trng
+				li
+					padding-left: 38px
+					&:not(:last-child)
+						margin-bottom: 20px
+					&::before
+						margin-top: -13.5px
+						width: 27px
+						height: 27px
+						background-position: 50% 50%
+						background-size: contain
+						background-repeat: no-repeat
+						background-color: transparent
+						border-radius: 50%
+						box-shadow: 0px 2px 8px -3px rgba(0, 0, 0, 0.69)
+					&:nth-child(1)
+						&::before
+							background-image: url('../img/sidebar__list-img_1.png')
+					&:nth-child(2)
+						&::before
+							background-image: url('../img/sidebar__list-img_2.png')
+					&:nth-child(3)
+						&::before
+							background-image: url('../img/sidebar__list-img_3.png')
+					&:nth-child(4)
+						&::before
+							background-image: url('../img/sidebar__list-img_4.png')
+	&__slider
+		padding-bottom: 40px
+		.cert__item
+			height: 250px
+		.owl-dots
+			bottom: 10px
+.serv
+	&-feed
+		padding: 39px 15px
+		background-color: #fff
+		border-radius: 6px
+		box-shadow: 0px 2px 8px -3px rgba(0, 0, 0, 0.69)
+		&__ttl
+			font-family: 'Proxima Nova Bl'
+			text-transform: uppercase
+			margin-bottom: 5px
+		&__item
+			&:not(:last-child)
+				margin-bottom: 15px
+			&-ttl
+				font-family: 'Proxima Nova Bl'
+				margin-bottom: 7px
+			input
+				width: 100%
+				border: 1px solid #bcbec0
+				border-radius: 2px
+		&__test
+			height: 100%
+			.section__ttl
+				font-size: 18px
+				margin-bottom: 20px
+			.section__subttl
+				font-size: 14px
+				font-weight: 600
+				text-align: center
+				margin-bottom: 30px
+			&-item
+				width: 100%
+				height: 200px
+				display: flex
+				flex-direction: column
+				align-items: center
+				justify-content: center
+				position: relative
+				&::before,
+				&::after
+					content: ''
+					position: absolute
+					background-color: #bcbec0
+				&:nth-child(1),
+				&:nth-child(2)
+					margin-bottom: 30px
+			&-img
+				width: 100%
+				height: 63px
+				background-position: 50% 50%
+				background-repeat: no-repeat
+				background-size: contain
+				margin-bottom: 10px
+			&-ttl
+				text-align: center
+			&-in
+				& > div
+					&:nth-child(1)
+						.serv-feed__test-item
+							&::after
+								width: 1px
+								height: 100%
+								right: -15px
+								bottom: -15px
+					&:nth-child(1)
+						.serv-feed__test-item
+							&::before
+								width: 100%
+								height: 1px
+								right: -15px
+								bottom: 0
+					&:nth-child(2)
+						.serv-feed__test-item
+							&::after
+								width: 100%
+								height: 1px
+								left: -15px
+								bottom: 0
+					&:nth-child(3)
+						.serv-feed__test-item
+							&::after
+								width: 1px
+								height: 100%
+								right: -15px
+								top: -15px
+					
+.rec
+	&__nav
+		margin-bottom: 40px
+		&-item
+			display: flex
+			justify-content: center
+			align-items: center
+			padding: 15px
+			border-radius: 6px
+			position: relative
+			min-height: 70px
+			// max-width: 260px
+			margin-left: auto
+			margin-right: auto
+			overflow: hidden
+			transition: .6s
+			background-position: 50% 50%
+			background-repeat: no-repeat
+			background-size: cover
+			&::before
+				content: ''
+				position: absolute
+				width: 100%
+				height: 100%
+				left: 0
+				top: 0
+				right: 0
+				bottom: 0
+				background-color: #820f71
+				opacity: .8
+				transition: .6s
+			span
+				font-family: 'Proxima Nova Bl'
+				font-size: 16px
+				color: #fff
+				text-transform: uppercase
+				position: relative
+				text-align: center
+			&:hover,
+			&.active
+				box-shadow: 0px 15px 24px 5px rgba(0, 0, 0, 0.34)
+				&::before
+					background-color: #fff
+				span
+					color: #000
+	&__list
+		&-item
+			margin-bottom: 30px
+			&-img
+				width: 100%
+				max-width: 210px
+				height: 180px
+				border-radius: 4px
+				box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.25)
+				background-position: 50% 50%
+				background-repeat: no-repeat
+				background-size: cover
+			&-ttl
+				font-size: 18px
+				font-family: 'Proxima Nova Bl'
+				margin-bottom: 20px
+div
+	&.pagination
+		display: flex
+		justify-content: center
+		align-items: center
+		margin-top: 20px
+		padding: 15px 0
+		ul
+			&.pagination
+				list-style-type: none
+				display: flex
+				justify-content: center
+				align-items: center
+				margin-bottom: 0
+				padding: 0
+				li
+					display: flex
+					justify-content: center
+					align-items: center
+					border-radius: 4px
+					border: 1px solid #000
+					&:not(:last-child)
+						margin-right: 9px
+					&.active
+						border: none
+						background: linear-gradient(to bottom, #e6a6c8 0%, #f7cfa3 100%)
+						box-shadow: 0px 5px 7px 1px rgba(0, 0, 0, 0.34)
+						a
+							color: #000
+					a
+						color: #000
+						width: 25px
+						height: 25px
+						border: none
+						display: flex
+						justify-content: center
+						align-items: center
+					&:hover
+						opacity: .7
+					&.control
+						opacity: 1
+						color: #fff
+						position: relative
+						background-color: transparent
+						&:hover
+							background-color: transparent
+						a
+							width: 45px
+							height: 25px
+						span
+							width: 45px
+							height: 25px
+							opacity: 0
+						&::before
+							content: ''
+							position: absolute
+							left: 50%
+							margin-left: -15px
+							top: 50%
+							margin-top: -10px
+							width: 30px
+							height: 20px
+						&_prev
+							margin-right: 15px
+							&::before
+								background: url('../img/pag__prev.png') no-repeat 50% 50% / 17px
+						&_next
+							margin-left: 15px
+							&::before
+								background: url('../img/pag__next.png') no-repeat 50% 50% / 17px
+.team
+	&__list
+		&-item
+			height: 100%
+			max-width: 370px
+			margin-left: auto
+			margin-right: auto
+			padding: 25px
+			border-radius: 6px
+			display: flex
+			flex-direction: column
+			&-img
+				width: 100%
+				height: 210px
+				border-radius: 6px
+				background-position: 50% 50%
+				background-repeat: no-repeat
+				background-size: cover
+				margin-bottom: 15px
+			&-ttl
+				font-size: 18px
+				font-family: 'Proxima Nova Bl'
+				margin-bottom: 20px
+			b
+				font-size: 17px
+
+.blog
+	&__list
+		&-item
+			max-width: 270px
+			width: 100%
+			display: flex
+			flex-direction: column
+			overflow: hidden
+			border-radius: 6px
+			&-img
+				height: 236px
+				width: 100%
+				background-position: 50% 50%
+				background-repeat: no-repeat
+				background-size: cover
+				position: relative
+				&.video
+					&::before
+						content: ''
+						position: absolute
+						width: 70px
+						height: 70px
+						left: 50%
+						margin-left: -35px
+						top: 50%
+						margin-top: -35px
+						background: url('../img/icon__play-blog.png') no-repeat 50% 50% / contain
+					&:hover
+						&::before
+							transform: scale(1.1)
+			&-bot
+				padding: 13px 18px 21px
+			&-ttl
+				font-size: 18px
+				font-family: 'Proxima Nova Bl'
+				margin-bottom: 6px
+	&__filter
+		&-list
+			li
+				padding-left: 0
+		&-item
+			width: 100%
+			margin-bottom: 0
+			position: relative
+			input[type="checkbox"],
+			input[type="radio"]
+				position: absolute
+				z-index: 1
+				opacity: 0
+				width: 100%
+				height: 30px
+				cursor: pointer
+			span
+				font-size: 14px
+				position: relative
+				padding: 2px 0 0 30px
+				cursor: pointer
+				width: 100%
+				height: 30px
+				display: block
+				&::before
+					content: ''
+					position: absolute
+					top: 0px
+					left: -2px
+					width: 21px
+					height: 21px
+					border-radius: 4px
+					border: 1px solid #7a0c6b
+					background: #fff
+				&::after
+					content: ''
+					position: absolute
+					top: 4px
+					left: 2px
+					width: 13px
+					height: 13px
+					background-color: #7a0c6b
+					opacity: 0
+					transform: scale(0)
+					transition: 0.2s
+					border-radius: 2px
+			input[type="checkbox"]:checked + span::after,
+			input[type="radio"]:checked + span::after
+				opacity: 1
+				transform: scale(1)
+			input[type="checkbox"]:checked + span::before,
+			input[type="radio"]:checked + span::before
+				background-color: #fff
+		&-reset
+			padding-left: 30px
+			position: relative
+			&::before
+				content: ''
+				position: absolute
+				width: 18px
+				height: 24px
+				left: 0
+				top: -2px
+				background: url('../img/icon__delete.png') no-repeat 50% 50% / contain
+			span
+				text-decoration: underline
+			&:hover
+				opacity: .7
+				transform: translateX(3px)
+.prog
+	padding-top: 0
+	overflow: hidden
+	&::after
+		display: none
+	&__banner
+		width: 100%
+		background-position: 50% 50%
+		background-repeat: no-repeat
+		background-size: cover
+		border-radius: 6px
+		text-align: center
+		padding: 30px 15px
+		margin-bottom: 25px
+		span
+			font-family: 'Proxima Nova Bl'
+			font-size: 25px
+			text-transform: uppercase
+	.tabs__list
+		margin-bottom: 0
+		li
+			color: #fff
+			text-align: center
+			padding-left: 6px
+			padding-right: 6px
+			position: relative
+			margin-bottom: 30px
+			&:not(:last-child)
+				&::before
+					content: ''
+					position: absolute
+					width: 1px
+					height: 100%
+					right: 0
+					top: 0
+					background: linear-gradient(to bottom, transparent 0%, #fff 50%, transparent 100%)
+			&::after
+				content: ''
+				position: absolute
+				width: 30px
+				height: 30px
+				left: 50%
+				margin-left: -15px
+				bottom: -46px
+				border-bottom: solid 15px #fff
+				border-right: solid 15px #fff
+				border-left: solid 15px transparent
+				border-top: solid 15px transparent
+				transform: rotate(225.3deg) scale(0)
+				opacity: 0
+				transition: .1s all ease
+			&.active
+				color: #000
+				&::after
+					opacity: 1
+					transform: rotate(225.3deg) scale(1)
+	&__item
+		height: 100%
+		padding: 25px
+		background-color: #fff
+		border-radius: 6px
+		position: relative
+		&_info
+			transition: unset
+		&_construct
+			background-color: #ffd0f8
+			&.inactive
+				&::before
+					content: ''
+					position: absolute
+					width: 100%
+					height: 100%
+					left: 0
+					top: 0
+					background-color: #fff
+					opacity: .7
+					border-radius: 6px
+					z-index: 2
+		&-img
+			color: #fff
+			width: 100%
+			max-width: 330px
+			margin-bottom: 15px
+			border-radius: 3px
+			min-height: 250px
+			padding: 30px
+			overflow: hidden
+			background-position: 50% 50%
+			background-repeat: no-repeat
+			background-size: cover
+			display: flex
+			justify-content: center
+			align-items: center
+			text-align: center
+			position: relative
+			&::before
+				content: ''
+				position: absolute
+				width: 100%
+				height: 100%
+				left: 0
+				top: 0
+				background-color: #383838
+				opacity: .4
+			span
+				position: relative
+				font-family: 'Proxima Nova Bl'
+				font-size: 25px
+				text-transform: uppercase
+		&-ttl
+			font-family: 'Proxima Nova Ex Bl'
+			font-size: 18px
+			margin-bottom: 5px
+		&-choose,
+		&-more
+			width: 260px
+			&.active
+				.prog__item-more-arr
+					transform: rotate(90deg) scaleX(-1)
+			&-arr
+				width: 10px
+				height: auto
+				margin-left: 13px
+				transform: rotate(90deg)
+		&-btn
+			width: 100%
+			padding-left: 3px
+			padding-right: 5px
+			position: relative
+			input[type="checkbox"],
+			input[type="radio"]
+				position: absolute
+				z-index: 1
+				opacity: 0
+				width: 100%
+				height: 30px
+				cursor: pointer
+			span
+				font-size: 14px
+				position: relative
+				text-align: center
+				cursor: pointer
+				width: 100%
+				height: 30px
+				display: flex
+				justify-content: center
+				align-items: center
+				color: #000
+				.prog__item-btn-text
+					font-size: 12px
+					position: relative
+					z-index: 1
+					transition: unset
+				&::before
+					content: ''
+					position: absolute
+					top: 0px
+					left: 0
+					width: 100%
+					height: 100%
+					border-radius: 2px
+					border: 1px solid #7a0c6b
+					background: #fff
+				&::after
+					content: ''
+					position: absolute
+					top: 0
+					left: 0
+					width: 100%
+					height: 100%
+					background-color: #7a0c6b
+					opacity: 0
+					transform: scale(0)
+					transition: 0.2s
+					border-radius: 2px
+			input[type="checkbox"]:checked + span,
+			input[type="radio"]:checked + span
+				color: #fff
+			input[type="checkbox"]:checked + span::after,
+			input[type="radio"]:checked + span::after
+				opacity: 1
+				transform: scale(1)
+			input[type="checkbox"]:checked + span::before,
+			input[type="radio"]:checked + span::before
+				background-color: #fff
+				box-shadow: 0px 5px 19px -3px rgba(138, 62, 95, 0.48)
+		&-modal
+			max-width: 270px
+			width: 100%
+			// display: block
+			// margin-left: auto
+			// margin-right: auto
+			// position: absolute
+			// left: 50%
+			// margin-left: calc(-270px/2)
+			// bottom: 25px
