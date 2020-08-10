@@ -404,7 +404,7 @@ textarea:active {
   background-image: url("../img/ar-left.svg");
   background-repeat: no-repeat;
   background-size: 50% 50%;
-  background-position: 42% 50%;
+  background-position: 50% 50%;
   top: 42%;
   left: 10px;
   outline: none;
@@ -422,14 +422,35 @@ textarea:active {
   background-image: url("../img/ar-right.svg");
   background-repeat: no-repeat;
   background-size: 50% 50%;
-  background-position: 42% 50%;
-  top: 50%;
+  background-position: 50% 50%;
+  top: 42%;
   right: 10px;
   outline: none;
   border: 2px solid #FFFFFF;
   box-sizing: border-box;
   border-radius: 3px;
 }
+
+.prev-right:hover, .prev-left:hover {
+  background-color: #000;
+  border: 2px solid #000;
+}
+
+.prev-right__black:hover, .prev-left__black:hover {
+  background-color: #000;
+  border: 2px solid #000;
+}
+
+.prev-left__black:hover {
+  background-image: url(../img/ar-left.svg);
+}
+
+.prev-right__black:hover {
+  background-image: url(../img/ar-right.svg);
+  transform: rotate(0deg);
+  background-position: 50% 50%;
+}
+
 
 .main-slider__bg {
   width: 100%;
@@ -1178,6 +1199,13 @@ textarea:active {
     font:  bold 14px/32px Formular, sans-serif!important;
     padding: 14px 50px;
     width: 270px;
-    text-shadow: transparent!important;
+    text-shadow: none!important;
     font-weight: bold;
+    box-shadow: none!important;
+  }
+
+  .main-form__file:hover .jq-file__browse{
+    background: #000!important;
+    color: #fff!important;
+    border: 2px solid #000!important;
   }
