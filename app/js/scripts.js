@@ -55,5 +55,15 @@ $(document).ready(function () {
       focusOnSelect: true
     });
 
+    $('.main-form__file').styler({
+       fileBrowse: 'Прикрепить файл',
+       filePlaceholder: 'Перетащите либо прикрепите файл',
+        singleSelectzIndex: '999',
+        onSelectOpened: function () {
+           // к открытому селекту добавляется красная обводка
+            //$(this).css('box-shadow: 0px 15px 31px rgba(0, 0, 0, 0.1);');
+        }
+    });
+
 
   });

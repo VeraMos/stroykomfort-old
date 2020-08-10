@@ -1148,3 +1148,36 @@ textarea:active {
   border: 2px solid #000;
   color: #fff;
 }
+
+.jq-file {
+  width: 100%!important;
+  height: 100%;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.jq-file__name {
+  padding: 0!important; 
+  border: none!important;
+  border-radius: 0!important;
+  font-family: Formular!important;
+  color: #5E5E5E!important;
+}
+
+.jq-file__browse {
+    position: absolute;
+    top: 35px!important;
+    right: 100px!important;
+    padding: 6px 10px!important;
+    color: #22201D!important;
+    border: 2px solid #5E5E5E!important;
+    box-sizing: border-box;
+    border-radius: 3px!important;
+    background: transparent!important;
+    height: 50px;
+    font:  bold 14px/32px Formular, sans-serif!important;
+    padding: 14px 50px;
+    width: 270px;
+    text-shadow: transparent!important;
+    font-weight: bold;
+  }
