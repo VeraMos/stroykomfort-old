@@ -640,7 +640,7 @@ textarea:active {
   background-repeat: no-repeat;
   background-size: 50% 50%;
   background-position: 42% 50%;
-  top: 50%;
+  top: 42%;
   right: -50px;
   outline: none;
   border: 2px solid #000;
@@ -1091,10 +1091,15 @@ textarea:active {
 }
 
 .slider-nav__block {
-  width: 270px!important;
-  height: 270px!important;
+  /*width: 270px!important;
+  height: 270px!important;*/
   margin: 15px;
   border-radius: 3px;
+}
+
+.work-examples .slick-list {
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
 .slider-nav__block-inn {
@@ -1142,9 +1147,6 @@ textarea:active {
   border: 2px solid #000;
 }
 
-.slider-nav-wpr .slick-track {
-  width: 1200px!important;
-}
 
 .button-3d__wpr {
   position: absolute;
@@ -1420,6 +1422,7 @@ textarea:active {
 
   .text-left {
     text-align: left;
+    max-width: 100%;
   }
 
   .catalog-item__img img{
@@ -1428,7 +1431,7 @@ textarea:active {
 
   .catalog-item__img {
     width: 196px;
-    height: 195px;
+    height: 194px;
     border: 1px solid #C0C0C0;
     box-sizing: border-box;
     overflow: hidden;
@@ -1484,4 +1487,16 @@ textarea:active {
   color: #5E5E5E;
   display: block;
   padding: 6px 0;
+}
+
+.slider-nav .prev-left__black {
+  left: 0px;
+}
+
+.slider-nav .prev-right__black {
+  right: 0px;
+}
+
+.categor-block {
+  display: flex;
 }

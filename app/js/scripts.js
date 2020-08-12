@@ -51,8 +51,13 @@ $(document).ready(function () {
       slidesToScroll: 1,
       asNavFor: '.slider-for',
       //dots: true,
-      centerMode: true,
-      focusOnSelect: true
+      arrows: true,
+      //centerMode: true,
+      //focusOnSelect: true,
+      prevArrow: '<button class="prev-left__black"></button>',
+      nextArrow: '<button class="prev-right__black"></button>',
+      infinite: true,
+      initialSlide: 1
     });
 
     $('.main-form__file').styler({
