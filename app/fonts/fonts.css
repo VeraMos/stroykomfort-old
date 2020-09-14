@@ -1,71 +1,63 @@
 @font-face {
-    font-family: 'Formular';
-    src: url('Formular-Bold.woff2') format('woff2'),
-        url('Formular-Bold.woff') format('woff');
-    font-weight: 900;
+    font-family: 'FuturaPT';
+    src: url('FuturaPT-Medium.woff2') format('woff2'),
+        url('FuturaPT-Medium.woff') format('woff');
+    font-weight: normal;
     font-style: normal;
 }
 
 @font-face {
-    font-family: 'Formular';
-    src: url('Formular-Medium.woff2') format('woff2'),
-        url('Formular-Medium.woff') format('woff');
+    font-family: 'FuturaPT';
+    src: url('FuturaPT-Вold.woff2') format('woff2'),
+        url('FuturaPT-Bold.woff') format('woff');
     font-weight: 700;
     font-style: normal;
 }
 
 @font-face {
-    font-family: 'Formular';
-    src: url('Formular.woff2') format('woff2'),
-        url('Formular.woff') format('woff');
-    font-weight: 500;
-    font-style: normal;
-}
-
-@font-face {
-    font-family: 'Formular';
-    src: url('Formular-Light.woff2') format('woff2'),
-        url('Formular-Light.woff') format('woff');
-    font-weight: 300;
-    font-style: normal;
-}
-
-@font-face {
-    font-family: 'Geometria';
-    src: url('Geometria-Light.woff2') format('woff2'),
-        url('Geometria-Light.woff') format('woff');
-    font-weight: 300;
-    font-style: normal;
-}
-
-@font-face {
-    font-family: 'Geometria';
-    src: url('Geometria-Regular.woff2') format('woff2'),
-        url('Geometria-Regular.woff') format('woff');
-    font-weight: 400;
-    font-style: normal;
-}
-
-@font-face {
-    font-family: 'Geometria';
-    src: url('Geometria-Medium.woff2') format('woff2'),
-        url('Geometria-Medium.woff') format('woff');
-    font-weight: 500;
-    font-style: normal;
-}
-
-@font-face {
-    font-family: 'Geometria';
-    src: url('Geometria-Bold.woff2') format('woff2'),
-        url('Geometria-Bold.woff') format('woff');
-    font-weight: 700;
-    font-style: normal;
-}
-
-@font-face {
-    font-family: 'Geometria';
-    src: url('Geometria-ExtraBold.woff2') format('woff2'),
-        url('Geometria-ExtraBold.woff') format('woff');
+    font-family: 'FuturaPT';
+    src: url('FuturaPT-ExtraВold.woff2') format('woff2'),
+        url('FuturaPT-ExtraВold.woff') format('woff');
     font-weight: 900;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'FuturaPT';
+    src: url('FuturaPT-Light.woff2') format('woff2'),
+        url('FuturaPT-Light.woff') format('woff');
+    font-weight: 300;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'FuturaPT';
+    src: url('FuturaPT-Demi.woff2') format('woff2'),
+        url('FuturaPT-Demi.woff') format('woff');
+    font-weight: 600;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'IstokWeb';
+    src: url('IstokWeb-Bold.woff2') format('woff2'),
+        url('IstokWeb-Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'a-futuraround';
+    src: url('a-futuraround.woff2') format('woff2'),
+        url('a-futuraround.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'a-futuraround';
+    src: url('a-futuraround-bold.woff2') format('woff2'),
+        url('a-futuraround-bold.woff') format('woff');
+    font-weight: bold;
     font-style: normal;
 }
